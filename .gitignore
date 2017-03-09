@@ -1,5 +1,4 @@
 # 編譯檔或lock file
-Gemfile
 Gemfile.lock
 
 # 壓縮檔或一些大檔案
