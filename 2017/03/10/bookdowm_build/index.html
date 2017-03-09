@@ -27,7 +27,7 @@ $ git clone https://github.com/ccckmit/bookdown.git
 $ cd bookd">
 <meta property="og:image" content="http://i.imgur.com/m1KV9Zt.png">
 <meta property="og:image" content="http://i.imgur.com/rYqFb6X.png">
-<meta property="og:updated_time" content="2017-03-09T17:38:10.000Z">
+<meta property="og:updated_time" content="2017-03-09T17:44:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bookdown網站建立初探">
 <meta name="twitter:description" content="偶然看到金門大學陳鍾誠教授發表的bookdown，是以Markdown撰寫書籍的平台，剛好在公司內部要嘗試將技術文件Markdown化來發布，但不方便放到gitbook上，因此就嘗試架陳教授的bookdown來試試，這裡將建置和使用過程做個備忘。
@@ -99,7 +99,7 @@ $ cd bookd">
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Kategorien</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
                     
@@ -153,12 +153,12 @@ $ cd bookd">
 <li>$ git clone <a href="https://github.com/ccckmit/bookdown.git" target="_blank" rel="external">https://github.com/ccckmit/bookdown.git</a></li>
 <li>$ cd bookdown</li>
 <li>$ npm install<br>install發生錯誤，如下圖，原因是/package.json第17行”mz”: “^2.6.0”之後備註文字無法解析，刪除後即可進行。<br><img src="http://i.imgur.com/m1KV9Zt.png" alt="Imgur"><br><img src="http://i.imgur.com/rYqFb6X.png" alt="Imgur"></li>
-<li>node server:在Mac上執行權限不足，加上sudo即可，run起來在<a href="http://localhost，https亦可。" target="_blank" rel="external">http://localhost，https亦可。</a></li>
+<li>node server:在Mac上執行權限不足，加上sudo即可，run起來在<a href="http://localhost" target="_blank" rel="external">http://localhost</a> 可瀏覽，https亦可。</li>
 </ul>
 </li>
 <li><p>在bookdown上建立書籍</p>
 <ul>
-<li>先在/setting/setting.mdo新增帳號密碼</li>
+<li>先在/setting/setting.mdo新增帳號密碼。</li>
 <li>以system(寫在setting.mdo中)帳密登入，在Top menu點擊”使用者”–&gt;”系統”，左側menu點擊使用者，再按下Top menu點擊”使用者”–&gt;”編輯”，在畫面表格新增一筆帳號profile。</li>
 <li>以新增的帳號登入，Top menu有”寫書”功能，但輸入書名submit後會自動建立兩個篇文檔目錄，但還沒有實體文檔產生。</li>
 <li>要建立實體md文檔，就點擊左側目錄如README，點擊Top menu”使用者”–&gt;”編輯”，以Markdown格式編輯內容，然後點擊Top menu”使用者”–&gt;”存檔”，文檔實體路徑在”/data/book/新書名”之下。</li>
@@ -169,8 +169,8 @@ $ cd bookd">
 <ul>
 <li>依照上述步驟即可建置完成一個以Markdown書籍為基礎的網站，我目前嘗試運用於公司內部技術文件之分享，因為比較是單向發佈，所以我把寫書、編輯、登出登入功能都從Menu上拿掉。</li>
 <li>目前感覺比較大的問題是網站的UX不太好，操作動線不順，同類型功能分散，如寫書和編輯、存檔隔得很遠，雖然理解可能是考慮編輯和存檔功能不只用在寫書，包含系統管理都在用，但對一般寫書的使用者來說，並不直覺，寫一本書下來滑鼠要移來移去…手酸，用筆電的觸控板就更累了。</li>
-<li>另外還有系統管理的部分，使用者的profile設定似乎沒有作用，還是需要到setting.mdo把home path改掉，Signin建立帳號的功能也不能用。</li>
-<li>距離產品化還有蠻大一段gap要跨越，之後人工能有較完整或自己有時間和能力來改改，還是會考慮作為公司內部IT部門共享平台來用。</li>
+<li>另外還有系統管理的部分，使用者的profile設定似乎沒有作用，還是需要到setting.mdo把home path改掉，Sign in建立帳號的功能也不能用(也許連上DB就可以吧，還沒測)。</li>
+<li>距離產品化感覺還有蠻大一段gap要跨越，也可能是陳教授有產品版沒公開也未可知，之後功能有較完整或自己有時間和能力來改改，還是會考慮作為公司內部IT部門共享平台來用。</li>
 </ul>
 </li>
 </ol>
@@ -218,7 +218,7 @@ $ cd bookd">
   
   
     <a href="/2017/03/09/githubio_memo/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">建立github.io blog步驟備忘</div>
     </a>
   
