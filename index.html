@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Page 1 | Leon&#39;s Blog</title>
+  <title>Página 1 | Leon&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -77,7 +77,7 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categorías</a> </li>
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
                     
@@ -98,6 +98,80 @@
       <div id="content" class="outer">
         
           <section id="main">
+  
+    <article id="post-bookdowm_build"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/03/10/bookdowm_build/">bookdown網站建立初探</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/03/10/bookdowm_build/" class="article-date">
+	  <time datetime="2017-03-09T17:10:00.000Z" itemprop="datePublished">March 10, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/架站/">架站</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>偶然看到金門大學陳鍾誠教授發表的bookdown，是以Markdown撰寫書籍的平台，剛好在公司內部要嘗試將技術文件Markdown化來發布，但不方便放到gitbook上，因此就嘗試架陳教授的bookdown來試試，這裡將建置和使用過程做個備忘。</p>
+<ol>
+<li><p>依據README.md</p>
+<ul>
+<li>$ git clone <a href="https://github.com/ccckmit/bookdown.git" target="_blank" rel="external">https://github.com/ccckmit/bookdown.git</a></li>
+<li>$ cd bookdown</li>
+<li>$ npm install<br>install發生錯誤，如下圖，原因是/package.json第17行”mz”: “^2.6.0”之後備註文字無法解析，刪除後即可進行。<br><img src="./01.jpg" alt="Alt text" title="npm install error"><br><img src="./02.jpg" alt="Alt text" title="package.json"></li>
+<li>node server:在Mac上執行權限不足，加上sudo即可，run起來在<a href="http://localhost，https亦可。" target="_blank" rel="external">http://localhost，https亦可。</a></li>
+</ul>
+</li>
+<li><p>在bookdown上建立書籍</p>
+<ul>
+<li>先在/setting/setting.mdo新增帳號密碼</li>
+<li>以system(寫在setting.mdo中)帳密登入，在Top menu點擊”使用者”–&gt;”系統”，左側menu點擊使用者，再按下Top menu點擊”使用者”–&gt;”編輯”，在畫面表格新增一筆帳號profile。</li>
+<li>以新增的帳號登入，Top menu有”寫書”功能，但輸入書名submit後會自動建立兩個篇文檔目錄，但還沒有實體文檔產生。</li>
+<li>要建立實體md文檔，就點擊左側目錄如README，點擊Top menu”使用者”–&gt;”編輯”，以Markdown格式編輯內容，然後點擊Top menu”使用者”–&gt;”存檔”，文檔實體路徑在”/data/book/新書名”之下。</li>
+<li>若要新增章節，可以按左上角”內容”，會顯示書籍結構(實體路徑/data/book/新書名/book.mdo)。</li>
+</ul>
+</li>
+<li><p>想法</p>
+<ul>
+<li>依照上述步驟即可建置完成一個以Markdown書籍為基礎的網站，我目前嘗試運用於公司內部技術文件之分享，因為比較是單向發佈，所以我把寫書、編輯、登出登入功能都從Menu上拿掉。</li>
+<li>目前感覺比較大的問題是網站的UX不太好，操作動線不順，同類型功能分散，如寫書和編輯、存檔隔得很遠，雖然理解可能是考慮編輯和存檔功能不只用在寫書，包含系統管理都在用，但對一般寫書的使用者來說，並不直覺，寫一本書下來滑鼠要移來移去…手酸，用筆電的觸控板就更累了。</li>
+<li>另外還有系統管理的部分，使用者的profile設定似乎沒有作用，還是需要到setting.mdo把home path改掉，Signin建立帳號的功能也不能用。</li>
+<li>距離產品化還有蠻大一段gap要跨越，之後人工能有較完整或自己有時間和能力來改改，還是會考慮作為公司內部IT部門共享平台來用。</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/架站/">架站</a>
+
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
   
     <article id="post-githubio_memo"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
@@ -166,80 +240,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-bookdowm_build"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/03/09/bookdowm_build/">bookdown網站建立初探</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/03/09/bookdowm_build/" class="article-date">
-	  <time datetime="2017-03-09T03:50:00.000Z" itemprop="datePublished">March 9, 2017</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/架站/">架站</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>偶然看到金門大學陳鍾誠教授發表的bookdown，是以Markdown撰寫書籍的平台，剛好在公司內部要嘗試將技術文件Markdown化來發布，但不方便放到gitbook上，因此就嘗試架陳教授的bookdown來試試，這裡將建置和使用過程做個備忘。</p>
-<ol>
-<li><p>依據README.md</p>
-<ul>
-<li>$ git clone <a href="https://github.com/ccckmit/bookdown.git" target="_blank" rel="external">https://github.com/ccckmit/bookdown.git</a></li>
-<li>$ cd bookdown</li>
-<li>$ npm install<br>install發生錯誤，如下圖，原因是/package.json第17行”mz”: “^2.6.0”之後備註文字無法解析，刪除後即可進行。<br><img src="./01.jpg" alt="Alt text" title="npm install error"><br><img src="./02.jpg" alt="Alt text" title="package.json"></li>
-<li>node server:在Mac上執行權限不足，加上sudo即可，run起來在<a href="http://localhost，https亦可。" target="_blank" rel="external">http://localhost，https亦可。</a></li>
-</ul>
-</li>
-<li><p>在bookdown上建立書籍</p>
-<ul>
-<li>先在/setting/setting.mdo新增帳號密碼</li>
-<li>以system(寫在setting.mdo中)帳密登入，在Top menu點擊”使用者”–&gt;”系統”，左側menu點擊使用者，再按下Top menu點擊”使用者”–&gt;”編輯”，在畫面表格新增一筆帳號profile。</li>
-<li>以新增的帳號登入，Top menu有”寫書”功能，但輸入書名submit後會自動建立兩個篇文檔目錄，但還沒有實體文檔產生。</li>
-<li>要建立實體md文檔，就點擊左側目錄如README，點擊Top menu”使用者”–&gt;”編輯”，以Markdown格式編輯內容，然後點擊Top menu”使用者”–&gt;”存檔”，文檔實體路徑在”/data/book/新書名”之下。</li>
-<li>若要新增章節，可以按左上角”內容”，會顯示書籍結構(實體路徑/data/book/新書名/book.mdo)。</li>
-</ul>
-</li>
-<li><p>想法</p>
-<ul>
-<li>依照上述步驟即可建置完成一個以Markdown書籍為基礎的網站，我目前嘗試運用於公司內部技術文件之分享，因為比較是單向發佈，所以我把寫書、編輯、登出登入功能都從Menu上拿掉。</li>
-<li>目前感覺比較大的問題是網站的UX不太好，操作動線不順，同類型功能分散，如寫書和編輯、存檔隔得很遠，雖然理解可能是考慮編輯和存檔功能不只用在寫書，包含系統管理都在用，但對一般寫書的使用者來說，並不直覺，寫一本書下來滑鼠要移來移去…手酸，用筆電的觸控板就更累了。</li>
-<li>另外還有系統管理的部分，使用者的profile設定似乎沒有作用，還是需要到setting.mdo把home path改掉，Signin建立帳號的功能也不能用。</li>
-<li>距離產品化還有蠻大一段gap要跨越，之後人工能有較完整或自己有時間和能力來改改，還是會考慮作為公司內部IT部門共享平台來用。</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/架站/">架站</a>
-
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
 </section>
@@ -251,9 +251,9 @@
     <form class="search-form">
         <label style="width: 72%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Search…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Buscar…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Search">
+        <input type="submit" class="search-form-submit" value="Buscar">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -334,10 +334,22 @@
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
+      <li class="active"><a>Posts recientes</a></li>
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/10/bookdowm_build/">bookdown網站建立初探</a></h6>
+              <span>March 10, 2017</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -351,18 +363,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/03/09/bookdowm_build/">bookdown網站建立初探</a></h6>
-              <span>March 9, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -370,7 +370,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Categorías</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/架站/">架站</a><span class="category-list-count">2</span></li></ul>
     </div>
@@ -385,7 +385,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archivos</h3>
 
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li></ul>
