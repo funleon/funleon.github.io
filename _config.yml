@@ -46,6 +46,9 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
+             架站: buildsite
+             程式: coding
+             生活: life
 tag_map:
 
 # Date / Time format
