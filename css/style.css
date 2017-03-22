@@ -9,6 +9,17 @@ body:after {
 body:after {
   clear: both;
 }
+#comment {
+  padding: 20px;
+  background: #272822;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  margin-bottom: 50px;
+}
+#comment .title {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
 html,
 body,
 div,
@@ -993,12 +1004,16 @@ a.article-title:hover {
 .nav-child {
   margin-left: 1em;
 }
-#comments {
+#comment {
   padding: 20px;
-  margin: 50px 0;
+  background: #272822;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  margin-bottom: 50px;
 }
-#comments a {
-  color: color-link;
+#comment .title {
+  font-weight: normal;
+  margin-bottom: 15px;
 }
 .archives-wrap {
   margin: 50px 0;
